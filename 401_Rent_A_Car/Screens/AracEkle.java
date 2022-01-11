@@ -94,6 +94,7 @@ public class AracEkle extends JFrame {
 				jump.setVisible(true);
 			}
 		});
+		//
 		JMenu rentMenu = new JMenu("Kiralamalar");
 		rentMenu.addMouseListener(new MouseAdapter() {
 			@Override
