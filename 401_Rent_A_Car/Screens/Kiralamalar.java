@@ -47,7 +47,7 @@ public class Kiralamalar extends JFrame {
 		sozlesme=new SozlesmeIslemleri(rs.getInt("ID"),rs.getString("KiralamaTarih"),
 					rs.getString("TeslimTarihi"),rs.getString("arabaID"));
 		
-			sozlesmeList.add(sozlesme);
+		sozlesmeList.add(sozlesme);
 		}
 		}
 		catch(Exception e )
