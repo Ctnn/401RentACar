@@ -77,21 +77,21 @@ public class Kiralamalar extends JFrame {
 				tarih1=model.getValueAt(selectedRowIndex, 2).toString();
 				aracID=sozlesme.getAracID().toString();
 				
-				int yýl1,yýl2,ay1,ay2,gun1,gun2,hesap;
+				int yÄ±l1,yÄ±l2,ay1,ay2,gun1,gun2,hesap;
 		
 		
 				
-				    yýl1=Integer.parseInt(tarih.substring(0,4));
+				    yÄ±l1=Integer.parseInt(tarih.substring(0,4));
 				    ay1=Integer.parseInt(tarih.substring(5,7));
 				    gun1=Integer.parseInt(tarih.substring(8,10));
 				    
 				
 	
-			    yýl2=Integer.parseInt(tarih1.substring(0,4));
+			    yÄ±l2=Integer.parseInt(tarih1.substring(0,4));
 			    ay2=Integer.parseInt(tarih1.substring(5,7));
 			    gun2=Integer.parseInt(tarih1.substring(8,10));
 			    
-			    hesap=(yýl2-yýl1)*365+(ay2-ay1)*30+(gun2-gun1);
+			    hesap=(yÄ±l2-yÄ±l1)*365+(ay2-ay1)*30+(gun2-gun1);
 			    if(hesap<0)
 			    {
 			    	
@@ -103,7 +103,7 @@ public class Kiralamalar extends JFrame {
 			    else if (hesap==0)
 			    {
 			    	JOptionPane.showMessageDialog(null,
-							"Seçilen sözleþmenin kontrat süresi bitmiþtir, silebilirsiniz",
+							"SeÃ§ilen sÃ¶zleÅŸmenin kontrat sÃ¼resi bitmiÅŸtir, silebilirsiniz",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);	
 			    	
@@ -111,7 +111,7 @@ public class Kiralamalar extends JFrame {
 			    else
 			    {
 			    	JOptionPane.showMessageDialog(null,
-							"Sözleþmenin bitimine '"+hesap+"' gün kalmýþtýr.",
+							"SÃ¶zleÅŸmenin bitimine '"+hesap+"' gÃ¼n kalmÄ±ÅŸtÄ±r.",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 			  
@@ -120,7 +120,7 @@ public class Kiralamalar extends JFrame {
 			
 		});
 		table.setModel(designModel);
-		//BÝLGÝLERÝ GETÝR
+		//BÄ°LGÄ°LERÄ° GETÄ°R
 	for(int i=0;i<list.size();i++)
 	{
 		row[0]=list.get(i).getKullaniciID();
@@ -137,7 +137,7 @@ public class Kiralamalar extends JFrame {
 		
 		DefaultTableModel clearModel = (DefaultTableModel) table.getModel();
 		
-		clearModel.setRowCount(0); //her þeyi sýfýrlýyorum
+		clearModel.setRowCount(0); //her ÅŸeyi sÄ±fÄ±rlÄ±yorum
 		 ArrayList<SozlesmeIslemleri> products = new ArrayList<SozlesmeIslemleri>();
 	        products = new Kiralamalar().sozlesmeListesi();
 	        
@@ -223,7 +223,7 @@ public class Kiralamalar extends JFrame {
 				if(tarih!="")
 				{
 				int dialogButton = JOptionPane.YES_NO_OPTION;
-				int dialogResult = JOptionPane.showConfirmDialog(btnSzleme, "SÖZLEÞME FESÝH", "Kayýtla birlikte, sözleþme fesh edilip araç boþa çýkacaktýr kabul ediyor musunuz ?", dialogButton);
+				int dialogResult = JOptionPane.showConfirmDialog(btnSzleme, "SÃ–ZLEÅžME FESÄ°H", "KayÄ±tla birlikte, sÃ¶zleÅŸme fesh edilip araÃ§ boÅŸa Ã§Ä±kacaktÄ±r kabul ediyor musunuz ?", dialogButton);
 				if(dialogResult == 0) {
 				  System.out.println("Yes option");
 		  SozlesmeIslemleri sonislem=new SozlesmeIslemleri(Integer.parseInt(kullaniciID),aracID);
@@ -241,7 +241,7 @@ public class Kiralamalar extends JFrame {
 				else
 				{
 					JOptionPane.showMessageDialog(null,
-							"Lütfen seçim yapýnýz.",
+							"LÃ¼tfen seÃ§im yapÄ±nÄ±z.",
 							"Uyari mesaji",
 							JOptionPane.WARNING_MESSAGE);
 				}
@@ -267,8 +267,8 @@ public class Kiralamalar extends JFrame {
 		JLabel short_spaceLabel6 = new JLabel("                               ");
 
 		
-		JMenu carMenu = new JMenu("Araç Ýþlemeleri");
-		JMenu contratMenu = new JMenu("Sözleþme Ýþlemleri");
+		JMenu carMenu = new JMenu("AraÃ§ Ä°ÅŸlemeleri");
+		JMenu contratMenu = new JMenu("SÃ¶zleÅŸme Ä°ÅŸlemleri");
 		contratMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -286,7 +286,7 @@ public class Kiralamalar extends JFrame {
 				jump.setVisible(true);
 			}
 		});
-		JMenu infoMenu = new JMenu("Hakkýnda");
+		JMenu infoMenu = new JMenu("HakkÄ±nda");
 		infoMenu.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -299,7 +299,7 @@ public class Kiralamalar extends JFrame {
 		
 		
 
-		JMenuItem s5 = new JMenuItem("Araç Listele");
+		JMenuItem s5 = new JMenuItem("AraÃ§ Listele");
 		s5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -309,7 +309,7 @@ public class Kiralamalar extends JFrame {
 				jump.setVisible(true);
 			}
 		});
-		JMenuItem s6 = new JMenuItem("Araç Ekle");
+		JMenuItem s6 = new JMenuItem("AraÃ§ Ekle");
 		s6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
